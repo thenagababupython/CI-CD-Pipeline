@@ -15,6 +15,9 @@ pipeline {
         }
     }
     stages{
+        when{
+            branch 'master'
+        }
         stage ('depoly to Production stage'){
             steps{
                 sh 'mvn depoly'
